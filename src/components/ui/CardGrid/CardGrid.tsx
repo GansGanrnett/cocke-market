@@ -13,7 +13,7 @@ export default function CardGrid({ backgroundColor }: Props) {
       <div className={styles.cardsBlock} id="cards">
         <div className={styles.cardsGrid}>
           {cards.map((c) => (
-            <Card key={c.id} id={c.id} title={c.title} img={c.img} description={c.description} />
+            <Card key={c.id} id={c.id} title={c.title} img={c.img} description={c.description} price={c.price}/>
           ))}
         </div>
       </div>

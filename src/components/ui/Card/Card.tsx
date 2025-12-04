@@ -3,7 +3,7 @@ import Button from '@/components/ui/Button/Button';
 import styles from './Card.module.css';
 import { ICardProps } from '@/types/TCardProps';
 
-export default function Card({ id, title, img, description }: ICardProps) {
+export default function Card({ id, title, img, description, price }: ICardProps) {
   return (
     <div className={styles.card}>
       <img src={img} alt={title} className={styles.img} />
@@ -15,7 +15,7 @@ export default function Card({ id, title, img, description }: ICardProps) {
         </div>
 
         <div className={styles.body}>
-          <h3 className={styles.bodyTitle}>{title}</h3>
+          <h3 className={styles.bodyTitle}>{price}</h3>
           <Button />
         </div>
       </div>
