@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import styles from './Gallery.module.css';
-import { galleryImages } from '@/data/GalleryData';
+import { galleryImages } from "@/data/GalleryData";
+import { useEffect, useState } from "react";
+import styles from "./Gallery.module.css";
 
 export default function Gallery() {
   const [visible, setVisible] = useState(galleryImages.slice(0, 9));
@@ -38,12 +38,22 @@ export default function Gallery() {
   }, []);
 
   return (
-    <div className={styles.gallery}>
-      {visible.map((img, i) => (
-        <div key={i} className={`${styles.item} ${fade[i] ? styles.fadeOut : styles.fadeIn}`}>
-          <img src={img} alt={`gallery-${i}`} />
-        </div>
-      ))}
+    <div className={styles.wrapper}>
+      <div className={styles.title}>
+        <h1>Сделали более 3.000 заказов за 2 года</h1>
+        <div>Посмотрите фото реальных заказов из нашего instagram</div>
+      </div>
+      <div className={styles.gallery}>
+        {visible.map((img, i) => (
+          <div
+            key={i}
+            className={`${styles.item} ${
+              fade[i] ? styles.fadeOut : styles.fadeIn
+            }`}>
+            <img src={img} alt={`gallery-${i}`} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

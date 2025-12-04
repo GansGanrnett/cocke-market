@@ -16,34 +16,37 @@ export default function App() {
 
   return (
     <div className="app-root">
-      <Header />
-
       <div className={style.main}>
-        <ButtonContext value={{ text: 'Перейти в каталог', onClick: handleClick }}>
-          <Container
-            height={1294}
-            backgroundColor="#081130"
-            backgroundImage="url(pick_1.jpg)"
-            backgroundPosition="right bottom"
-            left={
-              <Block
-                label="Надзаголовок"
-                bigText="Большой жирный текст"
-                midText="Средний текст"
-                smallText="Маленькая подпись под кнопкой"
-                color="#fff"
-              />
-            }
+        <div className={style.headerBlock}>
+          <Header />
+          <ButtonContext
+            value={{ text: "Перейти в каталог", onClick: handleClick }}>
+            <Container
+              height={1175}
+              // backgroundColor="#081130"
+              // backgroundImage="url(pick_1.jpg)"
+              // backgroundPosition="right bottom"
+              left={
+                <Block
+                  label="вкуснейшие"
+                  bigText="Пирожные и капкейки от 150 ₽/шт. с доставкой по Санкт Петербургу"
+                  midText="Приготовим за 3 часа в день заказа. Доставка на авто в холодильнике."
+                  smallText="9 различных видов на выбор"
+                  color="#fff"
+                />
+              }
 
-            // right={<div> <img src="pick_1.jpg" /></div>}
-          />
-        </ButtonContext>
+              // right={<div> <img src="pick_1.jpg" /></div>}
+            />
+          </ButtonContext>
+        </div>
 
-        <ButtonContext value={{ text: 'Купить', onClick: handleClick }}>
+        <ButtonContext value={{ text: "Купить", onClick: handleClick }}>
           <CardGrid backgroundColor="#FFF" />
         </ButtonContext>
 
-        <ButtonContext value={{ text: 'Купить', onClick: handleClick }}>
+        <ButtonContext
+          value={{ text: "Загрузить фотографию", onClick: handleClick }}>
           <Container
             height={1352}
             backgroundColor="#081130"
@@ -51,34 +54,34 @@ export default function App() {
             backgroundPosition="bottom, top, left bottom"
             right={
               <Block
-                label="Другой блок"
-                bigText="Вторая половина контейнера"
-                midText="Здесь тоже можно что-то писать"
-                smallText="Подпись"
+                label="Не нашли то что нужно?"
+                bigText="Приготовим заказ любой сложности по фото или эскизу"
+                midText="Загрузите фотографию или эскиз капкейков и мы рассчитаем стоимость за 30 минут"
+                // smallText="Подпись"
                 color="#fff"
               />
             }
           />
         </ButtonContext>
 
-        <ButtonContext value={{ text: 'Купить', onClick: handleClick }}>
+        <ButtonContext
+          value={{ text: "Задать вопрос Юлии", onClick: handleClick }}>
           <Container
             height={830}
             backgroundColor="#FFF"
-            bg2='url(woman.png)'
+            bg2="url(woman.png)"
             // backgroundImage="url(woman.png)"
             // backgroundPosition="center"
             // backgroundImage="url(cloud_top_2.png), url(cloud_bottom_2.png)"
             // backgroundPosition="top, bottom"
             left={
               <Block
-                label="Надзаголовок"
-                bigText="Большой жирный текст"
-                midText="Средний текст"
-                smallText="Маленькая подпись под кнопкой"
+                label="Кто будет готовить?"
+                bigText="Лично приготовлю и всё красиво упакую для вашего события"
+                midText="Проконсультирую по выбору капкейков и придумаю нестандартную идею"
+                // smallText="Маленькая подпись под кнопкой"
               />
             }
-            
           />
         </ButtonContext>
 

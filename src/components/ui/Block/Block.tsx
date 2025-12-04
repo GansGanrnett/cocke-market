@@ -3,10 +3,10 @@ import Button from '@/components/ui/Button/Button';
 import styles from './Block.module.css';
 
 type Props = {
-  label: string;
-  bigText: string;
-  midText: string;
-  smallText: string;
+  label?: string;
+  bigText?: string;
+  midText?: string;
+  smallText?: string;
   color?: string;
   // children?:ReactNode
 };

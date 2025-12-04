@@ -3,7 +3,7 @@
   height: 554px;
   display: flex;
   flex-direction: row;
-  background: var(--bg);
+  /* background: var(--bg); */
   overflow: hidden;
   border: 1px solid var(--border);
   background-repeat: no-repeat;
