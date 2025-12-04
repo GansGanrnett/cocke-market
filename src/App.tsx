@@ -1,23 +1,29 @@
-import style from './App.module.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import CardGrid from '@/components/ui/CardGrid/CardGrid';
-import Container from './components/ui/Container/Container';
-import Block from './components/ui/Block/Block';
-import Carousel from './components/ui/Carousel/Carousel';
-import { CarouselData } from './data/CarouselData';
-import Gallery from './components/ui/Gallery/Gallery';
-import { ButtonContext } from './types/ButtonContext';
+import CardGrid from "@/components/ui/CardGrid/CardGrid";
+import style from "./App.module.css";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Block from "./components/ui/Block/Block";
+import Carousel from "./components/ui/Carousel/Carousel";
+import Container from "./components/ui/Container/Container";
+import Gallery from "./components/ui/Gallery/Gallery";
+import { CarouselData } from "./data/CarouselData";
+import { ButtonContext } from "./types/ButtonContext";
 
 export default function App() {
   const handleClick = () => {
-    console.log('Button clicked!');
+    console.log("Button clicked!");
   };
 
   return (
     <div className="app-root">
       <div className={style.main}>
-        <div className={style.headerBlock}>
+        {/* <div className={style.headerBlock}> */}
+        <div
+          style={{
+            backgroundColor: "#081130",
+            backgroundImage: "url(pick_1.jpg)",
+            backgroundPosition: "right bottom",
+          }}>
           <Header />
           <ButtonContext
             value={{ text: "Перейти в каталог", onClick: handleClick }}>
